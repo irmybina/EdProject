@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MySwitch" parent="Theme.AppCompat.Light">
+        <item name="trackTint">@color/purple_d</item>
+        <item name="colorSwitchThumbNormal">#A5A5A5</item>
+        <item name="colorControlActivated">@color/purple_200</item>
+    </style>
+
+</resources>

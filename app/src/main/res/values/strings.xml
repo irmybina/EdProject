@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Sfera_ed</string>
+    <string name="user_id">ID 123 456 789</string>
+    <string name="rate">4.7</string>
+    <string name="user_name">Alice Peterson</string>
+    <string name="languages">Russian, English, German</string>
+    <string name="choose">Choose</string>
+    <string name="button_1_text">QUESTIONNAIRS</string>
+    <string name="button_2_text">PEOPLE</string>
+    <string name="input_aboutMe">About me</string>
+    <string name="switch_DaG">Dream and get</string>
+    <string name="wishes">WISHES</string>
+    <string name="moments">Moments</string>
+    <string name="chronicles">Chronicles</string>
+    <string name="aboutMe">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
+
+</resources>
