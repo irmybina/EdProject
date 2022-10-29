@@ -119,18 +119,21 @@
                     app:layout_constraintStart_toEndOf="@+id/language_icon"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/choose_button_1"
+                <Button
+                    android:id="@+id/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="18dp"
+                    android:background="@android:color/transparent"
                     android:fontFamily="@font/inter_regular"
+                    android:letterSpacing="0"
                     android:text="@string/choose"
+                    android:textAllCaps="false"
                     android:textColor="@color/purple_200"
-                    android:textSize="14sp"
+                    app:iconTint="@android:color/transparent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -161,18 +164,21 @@
                     app:layout_constraintStart_toEndOf="@+id/location_icon"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/choose_button_2"
+                <Button
+                    android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="18dp"
+                    android:background="@android:color/transparent"
                     android:fontFamily="@font/inter_regular"
+                    android:letterSpacing="0"
                     android:text="@string/choose"
+                    android:textAllCaps="false"
                     android:textColor="@color/purple_200"
-                    android:textSize="14sp"
+                    app:iconTint="@android:color/transparent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
@@ -323,7 +329,7 @@
                 <Button
                     android:id="@+id/wishes_button"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
+                    android:layout_height="56dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_weight="1"
@@ -364,19 +370,10 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/moments_add"
-                    android:layout_width="79dp"
-                    android:layout_height="140dp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="16dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/add" />
-
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcview"
-                    android:layout_width="298dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
                     android:layout_marginLeft="4dp"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
@@ -384,6 +381,7 @@
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="38dp">
 
@@ -403,16 +401,24 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:clipToPadding="false"
+                android:isScrollContainer="false">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcview2"
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="363dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:foregroundGravity="top"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
 
                 </androidx.recyclerview.widget.RecyclerView>
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,9 @@ class MainActivity : AppCompatActivity() {
     private var chroniclesCardIndex = 0
 
     private val adapter2 = Moment_adapter()
-    private val momentList = listOf(R.drawable.photo_1_moments,
+    private val momentList = listOf(
+        R.drawable.add,
+        R.drawable.photo_1_moments,
         R.drawable.photo_2_moments,
         R.drawable.photo_3_moments
         )
@@ -45,6 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         bindingClass.apply {
             rcview2.adapter = adapter
+            rcview.adapter = adapter2
             val chroniclesCard = Chronicles_card(chroniclesCardsList[0])
             adapter.addChroniclesCard(chroniclesCard)
 
@@ -72,6 +75,21 @@ class MainActivity : AppCompatActivity() {
             val chroniclesCard8 = Chronicles_card(chroniclesCardsList[8])
             adapter.addChroniclesCard(chroniclesCard8)
 
+            val momentCard = Moment(momentList[0])
+            adapter2.addMoment(momentCard)
+
+            val momentCard1 = Moment(momentList[1])
+            adapter2.addMoment(momentCard1)
+
+            val momentCard2 = Moment(momentList[2])
+            adapter2.addMoment(momentCard2)
+
+            val momentCard3 = Moment(momentList[3])
+            adapter2.addMoment(momentCard3)
+
+            val momentCard4 = Moment(momentList[3])
+            adapter2.addMoment(momentCard4)
+
         }
 
 
@@ -98,9 +116,9 @@ class MainActivity : AppCompatActivity() {
             .load(R.drawable.photo_3)
             .into(bindingClass.photo4)
 
-        Glide.with(this)
-            .load(R.drawable.add)
-            .into(bindingClass.momentsAdd)
+//        Glide.with(this)
+//            .load(R.drawable.add)
+//            .into(bindingClass.momentsAdd)
 
 //        Glide.with(this)
 //            .load(R.drawable.photo_1_moments)
@@ -159,14 +177,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun chr_card_init(){
         bindingClass.apply {
-            bindingClass.rcview2.layoutManager = GridLayoutManager(this@MainActivity, 3)
+            bindingClass.rcview2.layoutManager = CustomGridLayoutManager(this@MainActivity, 3)
             rcview2.adapter = adapter
-            butt.setOnClickListener {
-                if (chroniclesCardIndex>8) chroniclesCardIndex = 1
-                val chroniclesCard = Chronicles_card(chroniclesCardsList[chroniclesCardIndex])
-                adapter.addChroniclesCard(chroniclesCard)
-                chroniclesCardIndex++
-            }
+//            butt.setOnClickListener {
+//                if (chroniclesCardIndex>8) chroniclesCardIndex = 1
+//                val chroniclesCard = Chronicles_card(chroniclesCardsList[chroniclesCardIndex])
+//                adapter.addChroniclesCard(chroniclesCard)
+//                chroniclesCardIndex++
+//            }
         }
     }
 
@@ -174,12 +192,12 @@ class MainActivity : AppCompatActivity() {
         bindingClass.apply {
 //            bindingClass.rcview.layoutManager = LinearLayoutManager(this@MainActivity)
             rcview.adapter = adapter2
-            momentsAdd.setOnClickListener {
-                if (momentIndex>2) momentIndex = 2
-                val moment = Moment(momentList[momentIndex])
-                adapter2.addMoment(moment)
-                momentIndex++
-            }
+//            momentsAdd.setOnClickListener {
+//                if (momentIndex>2) momentIndex = 2
+//                val moment = Moment(momentList[momentIndex])
+//                adapter2.addMoment(moment)
+//                momentIndex++
+//            }
         }
     }
 }
