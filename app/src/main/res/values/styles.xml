@@ -6,4 +6,11 @@
         <item name="colorControlActivated">@color/purple_200</item>
     </style>
 
+    <style name= "InputField"  parent= "Theme.AppCompat.Light.NoActionBar" >
+        <item name= "colorAccent" >@color/purple_200</item>
+        <item name="android:textColorHint">#FF0000</item>
+        <item name="hintTextColor">#00FF00</item>
+
+    </style>
+
 </resources>
